@@ -6,12 +6,12 @@ def solution(A):
     n = len(A)
     L = [-1] + A
     count = 0
-    pos = (n // 2) + 1
+    pos = (n + 2) // 1
     candidate = L[pos]
     for i in range(1, n + 1):
         if (L[i] == candidate):
             count = count + 1
-    if (count >= pos):
+    if (2*count > n):
         return candidate
     return -1
 
